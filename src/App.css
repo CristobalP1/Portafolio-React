@@ -127,7 +127,8 @@ span.navbar-text {
 }
 
 .social-icon a img {
-  width: 40%;
+  width: 100%;
+  padding: 0.3rem;
   z-index: 1;
   transition: 0.3s ease-in-out;
   -webkit-transition: 0.3s ease-in-out;
@@ -137,8 +138,7 @@ span.navbar-text {
 }
 
 .social-icon a:hover img {
-  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg);
-  -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg);
+  background-color: #ad99fc;
 }
 
 .navbar-text button {
@@ -178,7 +178,8 @@ span.navbar-text {
 }
 
 .navbar-text button:hover {
-  color: #121212;
+  color: #ad99fc;
+  border-color: #ad99fc;
 }
 
 .nav-text button:hover::before {
@@ -257,6 +258,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
+
 .App {
   text-align: center;
 }
@@ -281,6 +283,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+img {
+  background-color: #ffffff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 4rem;
 }
 
 .App-link {
