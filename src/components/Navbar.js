@@ -2,6 +2,11 @@ import {useState,useEffect} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import logo from '../assets/svg/logo.svg'
+import navGmail from '../assets/svg/navGmail.svg'
+import navInstagram from '../assets/svg/navInstagram.svg'
+import navTiktok from '../assets/svg/navTiktok.svg'
+
 
 export const NavbarPage = () => {
     const [activateLink,setActivateLink] = useState('home');
@@ -19,10 +24,15 @@ export const NavbarPage = () => {
 
         return () => window.removeEventListener("scroll",onScroll);
     },[])
+
+    const onUpdateActiveLink = (value) => {
+      setActivateLink(value)
+    }
+
     return (
-        <Navbar expand="lg">
+        <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
           <Container>
-            <Navbar.Brand href="#home"><img src={''} alt='Logo'>
+            <Navbar.Brand href="#home"><img src={logo} alt='Logo'>
             </img>
             <div>Holaa</div>
             </Navbar.Brand>
@@ -31,15 +41,15 @@ export const NavbarPage = () => {
             </Navbar.Toggle>
             <Nav.Collapse id='basic-navbar-nav'>
               <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#skills">Skills</Nav.Link>
-                <Nav.Link href="#projects">Projects</Nav.Link>
+                <Nav.Link href="#home" className={activateLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
+                <Nav.Link href="#skills" className={activateLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('skills')}>Skills</Nav.Link>
+                <Nav.Link href="#projects" className={activateLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('projects')}>Projects</Nav.Link>
               </Nav>
               <span className='navbar-text'>
                 <div className='social-icon'>
-                    <a href="#"><img src={''} alt=""></img></a>
-                    <a href="#"><img src={''} alt=""></img></a>
-                    <a href="#"><img src={''} alt=""></img></a>
+                    <a href="#"><img src={navInstagram} alt=""></img></a>
+                    <a href="#"><img src={navTiktok} alt=""></img></a>
+                    <a href="#"><img src={navGmail} alt=""></img></a>
                 </div>
                 <button className='vvd' onClick={()=>{console.log('Holaa')}}><span>Let's Connect</span></button>
               </span>
