@@ -31,32 +31,6 @@ export const NavbarPage = () => {
     }
 
     return (
-/*         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
-          <Container>
-            <Navbar.Brand href="#home"><img src={logo} alt='Logo'>
-            </img>
-            <div>Holaa</div>
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls='basic-navbar-nav'>
-            <span className='navbar-toggler-icon'></span>
-            </Navbar.Toggle>
-            <Nav.Collapse id='basic-navbar-nav'>
-              <Nav className="me-auto">
-                <Nav.Link href="#home" className={activateLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
-                <Nav.Link href="#skills" className={activateLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                <Nav.Link href="#projects" className={activateLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('projects')}>Projects</Nav.Link>
-              </Nav>
-              <span className='navbar-text'>
-                <div className='social-icon'>
-                    <a href="#"><img src={navInstagram} alt=""></img></a>
-                    <a href="#"><img src={navTiktok} alt=""></img></a>
-                    <a href="#"><img src={navGmail} alt=""></img></a>
-                </div>
-                <button className='vvd' onClick={()=>{console.log('Holaa')}}><span>Let's Connect</span></button>
-              </span>
-              </Nav.Collapse>
-          </Container>
-        </Navbar> */
 
       <Navbar expand="lg" bg="dark" variant="dark" className={scrolled ? "scrolled" : ""}>
       <Container>
