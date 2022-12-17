@@ -305,6 +305,116 @@ img {
   -o-border-radius: 100%;
 }
 
+/*Projects*/
+
+.project{
+  padding: 80px 0;
+  position: relative;
+  background-color: #151515;
+}
+
+.project h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.project p {
+  color: #bbbbbb;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+
+.project .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  background-color: rgba(255, 255, 255 / 10%);
+  overflow: hidden;
+}
+
+.project .nav.nav-pills .nav-item {
+  width: 33.3333%;
+}
+
+.project .nav.nav-pills .nav-item {
+  background-color: transparent;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+
+
+
+/*skills*/
+
+.skill {
+  padding: 0 0 50px 0;
+  position: relative;
+  margin-top: 7rem;
+}
+
+.skill-bx {
+  background: #151515;
+  border-radius: 64px;
+  -webkit-border-radius: 64px;
+  -moz-border-radius: 64px;
+  -ms-border-radius: 64px;
+  -o-border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+
+.skill p {
+  color: #bbbbbb;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.img-skill{
+  width: 50%;
+  height: 10rem;
+}
+
+.item h5{
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 /*Banner*/
 
 .banner {
