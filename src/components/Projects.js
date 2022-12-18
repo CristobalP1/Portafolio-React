@@ -6,6 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 import ColorShap2 from '../assets/svg/logo.svg';
 import ProjectsCard from './ProjectCard';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 const ProjectsPages = () => {
 
@@ -43,14 +45,19 @@ const ProjectsPages = () => {
     ]
 
   return (
-        <section className='project' id='project'>
+        <section className='project' id='projects'>
             <Container>
                 <Row>
                     <Col>
+                    <TrackVisibility>
+                        {({isVisible}) =>
+                        <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                         <h2>Projects</h2>
                         <p>Lorem is simply vificu edr fewodsddf pararas dw</p>
+                        </div>}
+                        </TrackVisibility>
                         <Tab.Container id='projects-tabs' defaultActiveKey="first">
-                        <Nav variant="pills" defaultActiveKey="/home">
+                        <Nav variant="pills" className='nav-pills mb-5 justify-content-center align-items-center' id='pills-tab'>
                         <Nav.Item>
                             <Nav.Link eventKey="first">Tab One</Nav.Link>
                         </Nav.Item>

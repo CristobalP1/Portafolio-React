@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from '../assets/svg/logo.svg';
 import planet from '../assets/img/universe.jpg';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 const BannerSection = () => {
 
@@ -48,9 +50,14 @@ const BannerSection = () => {
             <Container>
                 <Row className="aling-items-center">
                     <Col xs={12} md={6} xl={7}>
+                        <TrackVisibility>
+                        {({isVisible}) =>
+                        <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                         <span className="tagline">Welcome to my Portfolio</span>
                         <h1>{'hi im developer '}<span className="wrap">{text}</span></h1>
                         <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore "</p>
+                        </div>}
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={planet} alt="Headder Img" className='img'></img>
