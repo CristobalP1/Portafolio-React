@@ -35,7 +35,7 @@ export const NavbarPage = () => {
       <Navbar expand="lg" bg="dark" variant="dark" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-            <img src={logo} alt='Logo'></img>
+            <img src={logo} alt='Logo' className='logo'></img>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"><span className='navbar-toggler-icon'></span></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
@@ -50,7 +50,6 @@ export const NavbarPage = () => {
                     <a href="#"><img src={navTiktok} alt="Tiktok Logo"></img></a>
                     <a href="#"><img src={navGmail} alt="Gmail Logo"></img></a>
                 </div>
-                <button className='vvd' onClick={()=>{console.log('Holaa')}}><span>Let's Connect</span></button>
               </span>
         </Navbar.Collapse>
       </Container>

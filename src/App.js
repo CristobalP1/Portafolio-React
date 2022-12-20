@@ -7,12 +7,14 @@ import SkillPage from './components/Skills';
 import ProjectsPages from './components/Projects';
 import ContactPages from './components/Contact';
 import FooterPages from './components/Footer';
+import SkillSet from './components/SkillsSet';
 
 function App() {
   return (
     <div className="App">
       <NavbarPage></NavbarPage>
       <BannerSection></BannerSection>
+      <SkillSet></SkillSet>
       <SkillPage></SkillPage>
       <ProjectsPages></ProjectsPages>
       <ContactPages></ContactPages>

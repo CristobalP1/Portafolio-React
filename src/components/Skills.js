@@ -4,8 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from '../assets/svg/logo.svg';
-import colorSharp from '../assets/img/colorSharp.jpg'
-import planet from '../assets/img/universe.jpg';
+import npmImg from '../assets/img/npm6.jpg';
+import mysqlImg from '../assets/img/mysql.png';
+import figmaImg from '../assets/img/figma.png';
+import dokcerImg from '../assets/img/docker5.jpg';
+import porstgresImg from '../assets/img/postgres6.jpg'
+import pythonImg from '../assets/img/python.png';
+
 
 const SkillPage = () => {
 
@@ -34,36 +39,38 @@ const SkillPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <div>
-                            <h2>Skills</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div className="row-skill-set">
+                            <h2>Other Skills</h2>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                             <div className="item">
-                                <img src={planet} alt="image" className="img-skill"></img>
-                                <h5>Web Developer</h5>
+                                <img src={pythonImg} alt="image" className="img-skill"></img>
+                                <h5>Python</h5>
                             </div>
                             <div className="item">
-                                <img src={planet} alt="image" className="img-skill"></img>
-                                <h5>Web Developer</h5>
+                                <img src={porstgresImg} alt="image" className="img-skill"></img>
+                                <h5>Postgres</h5>
                             </div>
                             <div className="item">
-                                <img src={planet} alt="image" className="img-skill"></img>
-                                <h5>Web Developer</h5>
+                                <img src={dokcerImg} alt="image" className="img-skill"></img>
+                                <h5>Docker</h5>
                             </div>
                             <div className="item">
-                                <img src={planet} alt="image" className="img-skill"></img>
-                                <h5>Web Developer</h5>
+                                <img src={figmaImg} alt="image" className="img-skill"></img>
+                                <h5>Figma</h5>
                             </div>
                             <div className="item">
-                                <img src={planet} alt="image" className="img-skill"></img>
-                                <h5>Web Developer</h5>
+                                <img src={mysqlImg} alt="image" className="img-skill"></img>
+                                <h5>Mysql</h5>
+                            </div>
+                            <div className="item">
+                                <img src={npmImg} alt="image" className="img-skill"></img>
+                                <h5>Npm</h5>
                             </div>
                             </Carousel>
                         </div>
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-left" src={colorSharp}></img>
         </section>
       )
 
