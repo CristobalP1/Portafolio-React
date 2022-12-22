@@ -6,7 +6,6 @@ import planet from '../assets/img/moon.jpg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import Button from 'react-bootstrap/Button';
-
 const BannerSection = () => {
 
     const [loopNum, setLoopNum] = useState(0);
@@ -49,7 +48,7 @@ const BannerSection = () => {
   return (
     <section className='banner' id='home'>
             <Container>
-                <Row className="aling-items-center">
+                <Row className="aling-items-center justify-content-center align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <TrackVisibility>
                         {({isVisible}) =>
@@ -58,14 +57,20 @@ const BannerSection = () => {
                         <h1>{'Hi i am a developer '}<span className="wrap">{text}</span></h1>
                         <p>{presentation}</p>
                         <div className='div-button'>
-                        <Button className="tagline" variant="outline-dark" onClick={()=>{console.log('Holaa')}}><span>Let's go to my Github</span></Button>
-                        <Button className="tagline" variant="outline-dark" onClick={()=>{console.log('Holaa')}}><span>Download my resume</span></Button>
+                            <Row>
+                                <Col className='button-b' lg={6} xs={12}>
+                                    <Button className="tagline" variant="outline-dark" onClick={()=>{console.log('Holaa')}}><span><a href="https://www.github.com/CristobalP1/" target='_blank'>Let's go to my Github</a></span></Button>
+                                </Col>
+                                <Col lg={6} xs={12}>
+                                    <Button className="tagline button-b" variant="outline-dark" onClick={()=>{console.log('Holaa')}}><span><a href="./curriculum_Cristobal_Dev.doc" download>Download my resume</a></span></Button>
+                                </Col>
+                            </Row>
                         </div>
                         </div>
                         }
                         </TrackVisibility>
                     </Col>
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} md={6} xl={5} className="align-items-center">
                         <img src={planet} alt="Headder Img" className='img'></img>
                     </Col>
                 </Row>

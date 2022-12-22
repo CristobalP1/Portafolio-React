@@ -14,6 +14,8 @@ import LogoDart from '../assets/img/dart.jpg'
 import LogoSql from '../assets/img/sql-24.png'
 import LogoBoostrap from '../assets/img/boostrap.png'
 import LogoDjango from '../assets/img/django.png'
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 
 const SkillSet = () => {
@@ -21,8 +23,13 @@ const SkillSet = () => {
       return (
         <section className="skill" id="skills">
             <Container>
-                <Row className="row-skill-set">
+                <Row className="row-skill-set justify-content-center align-items-center">
+                <TrackVisibility>
+                        {({isVisible}) =>
+                        <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                 <h2>Skills Sets</h2>
+                </div>}
+                </TrackVisibility>
                     <Col xs={12} sm={6} md={3} >
                     <img className="logo-skill-set" src={LogoJs}></img>
                     <p>JavaScript</p>

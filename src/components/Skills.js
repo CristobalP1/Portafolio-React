@@ -10,6 +10,8 @@ import figmaImg from '../assets/img/figma.png';
 import dokcerImg from '../assets/img/docker5.jpg';
 import porstgresImg from '../assets/img/postgres6.jpg'
 import pythonImg from '../assets/img/python.png';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 
 const SkillPage = () => {
@@ -37,10 +39,15 @@ const SkillPage = () => {
       return (
         <section className="skill" id="skills">
             <Container>
-                <Row>
+                <Row className="justify-content-center align-items-center">
                     <Col>
                         <div className="row-skill-set">
+                        <TrackVisibility>
+                        {({isVisible}) =>
+                        <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                             <h2>Other Skills</h2>
+                            </div>}
+                        </TrackVisibility>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                             <div className="item">
                                 <img src={pythonImg} alt="image" className="img-skill"></img>
