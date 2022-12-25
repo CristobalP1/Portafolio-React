@@ -766,8 +766,8 @@ img {
 .field input ,textarea{
   outline: none;
   width: 100%;
-  background-color: #210021;
-  border: solid 0.1rem rgb(155, 155, 155);
+  background-color: #280728;
+  border: solid 0.1rem rgb(198, 198, 198);
   padding: 0.5rem;
   color: #fff;
   border-radius: 0.4rem;

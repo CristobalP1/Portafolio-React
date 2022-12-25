@@ -7,6 +7,9 @@ import IA from '../assets/img/iaProject.jpg';
 import Cat from '../assets/img/project_cat.jpg';
 import Calculator from '../assets/img/project_calculator2.jpg';
 import Coffe from '../assets/img/project_coffe.jpg';
+import Bodega from '../assets/img/project_bodega.jpg';
+import Coffe2 from '../assets/img/project_coffe_2.jpg';
+import RestApi from '../assets/img/Project_BackEnd.jpg';
 import ProjectsCard from './ProjectCard';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -19,21 +22,21 @@ const ProjectsPages = () => {
             description:"Javascript - Bootstrap - Html - Css",
             imgUrl:Cat,
             code:"https://github.com/CristobalP1/Login-WebSite-Bootstrap",
-            view:"",
+            view:"https://cristobalp1.github.io/Login-WebSite-Bootstrap/",
         },
         {
             title:"Portal IA Education",
             description:"Javascript - Html - Css",
             imgUrl:IA,
             code:"https://github.com/CristobalP1/LandingPage-IA",
-            view:"",
+            view:"https://cristobalp1.github.io/LandingPage-IA/",
         },
         {
             title:"Calculator Iphone",
             description:"Javascript - Html - Css",
             imgUrl:Calculator,
             code:"https://github.com/CristobalP1/Calculator-Iphone-JS",
-            view:"",
+            view:"https://cristobalp1.github.io/Calculator-Iphone-JS/",
         },
         {
             title:"Coffee WebSite",
@@ -42,53 +45,29 @@ const ProjectsPages = () => {
             code:"https://github.com/CristobalP1/Coffee-WebSite",
             view:"",
         },
-/*         {
-            title:"Business Startup",
-            description:"Desing and Developed",
-            imgUrl:ColorShap2,
-            codeUrl:codeSvg,
-            viewUrl:viewSvg,
+        {
+            title:"App Bodega",
+            description:"Flutter - Dart",
+            imgUrl:Bodega,
+            code:"https://github.com/CristobalP1/AppBodega",
+            view:"",
         },
         {
-            title:"Business Startup",
-            description:"Desing and Developed",
-            imgUrl:ColorShap2,
-            codeUrl:codeSvg,
-            viewUrl:viewSvg,
+            title:"Ecommerce Coffe",
+            description:"Javascript - React - Material Ui",
+            imgUrl:Coffe2,
+            code:"https://github.com/CristobalP1/Ecommerce-React-Js",
+            view:"",
         },
-        {
-            title:"Business Startup",
-            description:"Desing and Developed",
-            imgUrl:ColorShap2,
-            codeUrl:codeSvg,
-            viewUrl:viewSvg,
-        },
-        {
-            title:"Business Startup",
-            description:"Desing and Developed",
-            imgUrl:ColorShap2,
-            codeUrl:codeSvg,
-            viewUrl:viewSvg,
-        },
-        {
-            title:"Business Startup",
-            description:"Desing and Developed",
-            imgUrl:ColorShap2,
-            codeUrl:codeSvg,
-            viewUrl:viewSvg,
-        }, */
     ]
 
     const projectsBackEnd = [
         {
-            title:"Business Startup",
-            description:"Desing and Developed",
-            imgUrl:IA,
-        },
-        {
-            title:"Business Startup",
-            description:"Desing and Developed",
-            imgUrl:IA,
+            title:"Rest Api Node",
+            description:"NodeJs - Postgresql - JavaScript",
+            imgUrl:RestApi,
+            code:"https://github.com/CristobalP1/Rest-Api-NodeJs-Postgres",
+            view:"",
         },
     ]
 
