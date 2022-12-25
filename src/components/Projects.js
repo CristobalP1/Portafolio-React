@@ -9,6 +9,7 @@ import Calculator from '../assets/img/project_calculator2.jpg';
 import Coffe from '../assets/img/project_coffe.jpg';
 import Bodega from '../assets/img/project_bodega.jpg';
 import Coffe2 from '../assets/img/project_coffe_2.jpg';
+import ApiCofee from '../assets/img/project_coffeapi.jpg';
 import RestApi from '../assets/img/Project_BackEnd.jpg';
 import ProjectsCard from './ProjectCard';
 import 'animate.css';
@@ -68,6 +69,13 @@ const ProjectsPages = () => {
             imgUrl:RestApi,
             code:"https://github.com/CristobalP1/Rest-Api-NodeJs-Postgres",
             view:"",
+        },
+        {
+            title:"Api Coffe Sample",
+            description:"NodeJs - JavaScript",
+            imgUrl:ApiCofee,
+            code:"https://github.com/CristobalP1/Api-Node-Sample",
+            view:"https://api-node-sample-production.up.railway.app/",
         },
     ]
 
