@@ -302,7 +302,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   align-items: center;
   background-color: var(--color-p-6);
+  clip-path: polygon(100% 0, 100% 78%, 49% 95%, 0 78%, 0 0);
 }
+
 
 .banner .tagline {
   font-weight: 700;
@@ -389,6 +391,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .skill {
   position: relative;
+  padding: 5rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
   background-color:var(--color-p-1);
@@ -505,6 +508,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /*******Services*******/
 
+.services {
+  background-color: var(--color-p-2);
+  padding: 5rem;
+  margin-top: 3rem;
+  -webkit-clip-path: polygon(50% 0%, 100% 4%, 100% 96%, 50% 100%, 0 95%, 0 4%);
+  clip-path: polygon(50% 0%, 100% 4%, 100% 96%, 50% 100%, 0 95%, 0 4%);
+}
+
 .service-header h2{
   font-size: 2rem;
   font-weight: 700;
@@ -577,7 +588,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /*******Projects*******/
 
 .project{
-  margin-top: 7rem;
+  margin-top: 0.3rem;
+  padding: 5rem;
   position: relative;
   background-color: var(--color-p-1) !important;
 }
