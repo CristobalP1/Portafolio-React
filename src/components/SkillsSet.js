@@ -16,9 +16,63 @@ import LogoBoostrap from '../assets/img/boostrap.png'
 import LogoDjango from '../assets/img/django.png'
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import CardSkill from "./CardSkill";
 
 
 const SkillSet = () => {
+
+    const skillSets = [
+        {
+            title:"JavaScript",
+            img:LogoJs,
+        },
+        {
+            title:"ReactJS",
+            img:LogoReact,
+        },
+        {
+            title:"NodeJs",
+            img:LogoNode,
+        },
+        {
+            title:"Git",
+            img:LogoGit,
+        },
+        {
+            title:"Django",
+            img:LogoDjango,
+        },
+        {
+            title:"TypeScript",
+            img:LogoType,
+        },
+        {
+            title:"Html",
+            img:LogoHtml,
+        },
+        {
+            title:"Css",
+            img:LogoCss,
+        },
+        {
+            title:"Flutter",
+            img:LogoFlutter,
+        },
+        {
+            title:"Dart",
+            img:LogoDart,
+        },
+        {
+            title:"Boostrap",
+            img:LogoBoostrap,
+        },
+        {
+            title:"Sql",
+            img:LogoSql,
+        },
+
+    ]
+
 
       return (
         <section className="skill" id="skills">
@@ -28,56 +82,16 @@ const SkillSet = () => {
                         {({isVisible}) =>
                         <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                 <h2>Skills Sets</h2>
+                <p>skills that I manage and have used in some of my projects</p>
                 </div>}
                 </TrackVisibility>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoJs}></img>
-                    <p>JavaScript</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoReact}></img>
-                    <p>ReactJS</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoNode}></img>
-                    <p>NodeJs</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoType}></img>
-                    <p>TypeScript</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoGit}></img>
-                    <p>Git</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoHtml}></img>
-                    <p>Html</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoCss}></img>
-                    <p>Css</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoFlutter}></img>
-                    <p>Flutter</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoDart}></img>
-                    <p>Dart</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoBoostrap}></img>
-                    <p>Boostrap</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoSql}></img>
-                    <p>Sql</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={3} >
-                    <img className="logo-skill-set" src={LogoDjango}></img>
-                    <p>Django</p>
-                    </Col>
+                {
+                    skillSets.map((skills,index)=>{
+                        return (
+                            <CardSkill key={index} {...skills}></CardSkill>
+                        )
+                    })
+                }
                 </Row>
             </Container>
         </section>

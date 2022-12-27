@@ -44,7 +44,7 @@ const ProjectsPages = () => {
             description:"Javascript - Html - Css - axios",
             imgUrl:Coffe,
             code:"https://github.com/CristobalP1/Coffee-WebSite",
-            view:"",
+            view:"https://cristobalp1.github.io/Coffee-WebSite/",
         },
         {
             title:"App Bodega",
@@ -81,13 +81,14 @@ const ProjectsPages = () => {
 
   return (
         <section className='project' id='projects'>
-            <Container>
+            <Container className='mt-5 mb-5'>
                 <Row className="row-skill-set justify-content-cente align-items-center">
                     <Col>
                     <TrackVisibility>
                         {({isVisible}) =>
                         <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                         <h2>Projects</h2>
+                        <p>Some of the projects I have worked on both as a team and personally</p>
                         </div>}
                         </TrackVisibility>
                         <Tab.Container id='projects-tabs' defaultActiveKey="first">
