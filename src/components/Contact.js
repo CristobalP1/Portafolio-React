@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import ColorShap2 from '../assets/svg/msg.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import {DB_HOST} from './config';
+import {DB_HOST,DB_REQUEST} from './Utils';
 
 const ContactPages = () => {
 
@@ -31,7 +31,7 @@ const ContactPages = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         setButtonText('Sending...');
-        let response = await fetch(`${DB_HOST}` + "/contact",{
+        let response = await fetch(`${DB_HOST}` + `${DB_REQUEST}`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
