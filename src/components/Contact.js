@@ -2,9 +2,10 @@ import {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ColorShap2 from '../assets/img/universe23.jpg';
+import ColorShap2 from '../assets/svg/msg.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import {DB_HOST} from './config';
 
 const ContactPages = () => {
 
@@ -30,27 +31,34 @@ const ContactPages = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         setButtonText('Sending...');
-        let response = await fetch("http://localhost:5000/contact",{
+        let response = await fetch(`${DB_HOST}` + "/contact",{
             method:"POST",
             headers:{
-                "Content-Type":"Aplication/json;charset=utf-8",
+                "Content-Type":"application/json",
             },
             body: JSON.stringify(formDetails),
-        });
+        }).then((response) => {
+            if (response.status === 200) {
+                setStatus({success: true, message:'Message sent successfully'});
+            } else {
+                setStatus({success: false, message:'Something went wrong, please try again later.'});
+                console.log(response);
+                console.log(response.status);
+            }
+        })
+        .catch((err) => {
+            setStatus({success: false, message:`Something went wrong, please try again later.`})
+            console.log(err);
+    });
+
         setButtonText("Send");
-        let result = response.json();
         setFormDetails(formInitialDetails);
-        if (result.code === 200) {
-            setStatus({success: true, message:'Message sent successfully'});
-        } else {
-            setStatus({success: false, message:'Something went wrong, please try again later.'});
-        }
     };
 
   return (
         <section className='contact' id='connect'>
             <Container>
-                <Row className='align-items-center row-skill-set justify-content-center '>
+                <Row className='align-items-center row-skill-set justify-content-center contact-body'>
                     <Col lg={6} md={12}><img src={ColorShap2} alt='Contact Us' className='img-contact'></img></Col>
                     <Col lg= {6} md={12} className='mt-5'>
                     <TrackVisibility>

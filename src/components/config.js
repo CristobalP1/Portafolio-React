@@ -1,0 +1,1 @@
+export const DB_HOST = process.env.DB_HOST || 'http://localhost:3000';
