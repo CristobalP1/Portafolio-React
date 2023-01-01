@@ -5,17 +5,9 @@ import Col from 'react-bootstrap/Col';
 import ColorShap2 from '../assets/svg/msg.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import {DB_HOST,DB_REQUEST} from './Utils';
+import {DB_HOST,formInitialDetails} from './Utils';
 
 const ContactPages = () => {
-
-    const formInitialDetails = {
-        firstName:'',
-        lastName:'',
-        email:'',
-        phone:'',
-        message:''
-    }
 
     const [formDetails, setFormDetails] = useState(formInitialDetails);
     const [buttonText, setButtonText] = useState('Send');
@@ -31,7 +23,7 @@ const ContactPages = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         setButtonText('Sending...');
-        let response = await fetch(`${DB_HOST}` + `${DB_REQUEST}`,{
+        let response = await fetch(`${DB_HOST}`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -42,13 +34,10 @@ const ContactPages = () => {
                 setStatus({success: true, message:'Message sent successfully'});
             } else {
                 setStatus({success: false, message:'Something went wrong, please try again later.'});
-                console.log(response);
-                console.log(response.status);
             }
         })
         .catch((err) => {
             setStatus({success: false, message:`Something went wrong, please try again later.`})
-            console.log(err);
     });
 
         setButtonText("Send");

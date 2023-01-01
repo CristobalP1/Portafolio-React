@@ -53,7 +53,7 @@ const BannerSection = () => {
                         <TrackVisibility>
                         {({isVisible}) =>
                         <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                        <span className="welcome">Welcome to my Portfolio</span>
+                        <span className="welcome">Welcome to my Portfolio My Love</span>
                         <h1>{'Hi i am a developer '}<span className="wrap">{text}</span></h1>
                         <p>{presentation}</p>
                         <div className='div-button'>

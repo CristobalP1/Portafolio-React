@@ -23,3 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 Utils.js
+
+.env
+.env.local
+.env.prod
+.env-cmdrc.json
