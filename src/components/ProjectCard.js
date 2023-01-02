@@ -6,7 +6,7 @@ import NoviewSvg from '../assets/svg/noView.svg';
 const ProjectsCard = ({title,description,imgUrl,code,view}) => {
 
   return (
-       <Col sm={6} md={4}>
+       <Col xs={12} sm={12} md={6} lg={4}>
             <div className='proj-imgbx'>
                 <img src={imgUrl}></img>
                 <div className='proj-txtx'>

@@ -5,7 +5,8 @@ import Col from 'react-bootstrap/Col';
 import ColorShap2 from '../assets/svg/msg.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import {DB_HOST,formInitialDetails} from './Utils';
+import {DB_HOST,formInitialDetails,DB_USER,DB_PASS} from '../helpers/auth';
+import { Buffer } from 'buffer';
 
 const ContactPages = () => {
 
@@ -20,14 +21,16 @@ const ContactPages = () => {
         })
     }
 
+    const base64encodedData = Buffer.from(`${DB_USER}:${DB_PASS}`).toString('base64');
     const handleSubmit = async(e) => {
         e.preventDefault();
         setButtonText('Sending...');
         let response = await fetch(`${DB_HOST}`,{
             method:"POST",
-            headers:{
+            headers:new Headers({
+                "Authorization": "Basic " + `${base64encodedData}`,
                 "Content-Type":"application/json",
-            },
+            }),
             body: JSON.stringify(formDetails),
         }).then((response) => {
             if (response.status === 200) {
@@ -39,7 +42,6 @@ const ContactPages = () => {
         .catch((err) => {
             setStatus({success: false, message:`Something went wrong, please try again later.`})
     });
-
         setButtonText("Send");
         setFormDetails(formInitialDetails);
     };
