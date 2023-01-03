@@ -349,13 +349,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner img {
-  padding-top: 1rem;
+  padding: 5rem;
   margin-top: 1rem;
   animation: updown 3s linear infinite;
   -webkit-animation: updown 3s linear infinite;
-  width: 80%;
+  background-color:transparent;
+  width: 21rem;
   height: 25rem;
 }
+
+.img-banner img:hover {
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  transition: 1s;
+  box-shadow: 0px 0px 15px 15px var(--color-p-4);
+  -webkit-box-shadow: 0px 0px 15px 15px var(--color-p-4);
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
 
 .welcome {
   font-size: 1.3rem;

@@ -1,7 +1,6 @@
 import "react-multi-carousel/lib/styles.css";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import LogoJs from '../assets/img/js.png'
 import LogoNode from '../assets/img/png-transparent-js-logo-node-logos-and-brands-icon.png'
 import LogoReact from '../assets/img/react.png'

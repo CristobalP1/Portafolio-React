@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import planet from '../assets/img/moon.jpg';
+import planet from '../assets/svg/star23.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import Button from 'react-bootstrap/Button';
@@ -70,8 +70,8 @@ const BannerSection = () => {
                         }
                         </TrackVisibility>
                     </Col>
-                    <Col xs={12} md={6} xl={5} className="align-items-center">
-                        <img src={planet} alt="Headder Img" className='img'></img>
+                    <Col xs={12} md={6} xl={5} className="align-items-center img-banner">
+                        <img src={planet} alt="Headder Img"></img>
                     </Col>
                 </Row>
             </Container>
