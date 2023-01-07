@@ -62,7 +62,7 @@ const BannerSection = () => {
                                     <Button className="tagline" variant="outline-dark" onClick={()=>{console.log('Holaa')}}><span><a href="https://www.github.com/CristobalP1/" target='_blank'>Let's go to my Github</a></span></Button>
                                 </Col>
                                 <Col lg={6} xs={12}>
-                                    <Button className="tagline button-b" variant="outline-dark" onClick={()=>{console.log('Holaa')}}><span><a href="./curriculum_Cristobal_Dev.doc" download>Download my resume</a></span></Button>
+                                    <Button className="tagline button-b" variant="outline-dark" onClick={()=>{console.log('Holaa')}}><span><a href="./curriculum_cristobal.docx" download>Download my resume</a></span></Button>
                                 </Col>
                             </Row>
                         </div>
